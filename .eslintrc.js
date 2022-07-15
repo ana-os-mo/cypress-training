@@ -25,6 +25,6 @@ module.exports = {
     "require-jsdoc": "warn",
     "max-len": ["error", {"code": 120}],
     /* prevents LF - CRLF problem from appearing */
-    "linebreak-style": ["error", "windows"],
+    // "linebreak-style": ["error", "windows"],
   },
 };

@@ -17,7 +17,7 @@ class PaymentStepPage {
     cy.get(this.confirmOrderMenu).click();
   }
 
-  public getOrderMessage(message: string): void {
+  public validateOrderMessage(message: string): void {
     cy.get(this.orderCompleteMessage)
         .should("have.text", message);
   }

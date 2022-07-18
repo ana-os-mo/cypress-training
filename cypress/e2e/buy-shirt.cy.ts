@@ -38,6 +38,6 @@ describe("Buy a t-shirt", () => {
     paymentStepPage.goToConfirmOrderMenu();
 
     // assertion
-    paymentStepPage.getOrderMessage(validationMessage);
+    paymentStepPage.validateOrderMessage(validationMessage);
   });
 });

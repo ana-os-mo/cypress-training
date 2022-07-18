@@ -3,8 +3,8 @@ class ShoppingCartPage {
   private authenticationMenu: string;
 
   constructor() {
-    this.shoppingCartMenu = ".button-container > .button-medium > span";
-    this.authenticationMenu = ".cart_navigation > .button > span";
+    this.shoppingCartMenu = ".button-container > .button-medium";
+    this.authenticationMenu = ".cart_navigation > .button";
   }
 
   public goToShoppingCartMenu(): void {

@@ -6,7 +6,7 @@ class LoginPage {
   constructor() {
     this.emailField = "#email";
     this.passwordField = "#passwd";
-    this.logInMenu = "#SubmitLogin > span";
+    this.logInMenu = "#SubmitLogin";
   }
 
   public fillIdFields(email:string, password:string): void {

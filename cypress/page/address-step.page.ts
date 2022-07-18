@@ -2,7 +2,7 @@ class AddressStepPage {
   private shippingMenu: string;
 
   constructor() {
-    this.shippingMenu = ".cart_navigation > .button > span";
+    this.shippingMenu = ".cart_navigation > .button";
   }
 
   public goToShippingMenu(): void {

@@ -4,7 +4,7 @@ class ShippingStepPage {
 
   constructor() {
     this.termsOfServiceCheckbox = "#cgv";
-    this.paymentMethodMenu = ".cart_navigation > .button > span";
+    this.paymentMethodMenu = ".cart_navigation > .button";
   }
 
   public markTermsOfServiceCheckbox(): void {

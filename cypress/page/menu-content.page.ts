@@ -4,7 +4,7 @@ class MenuContentPage {
 
   constructor() {
     this.menuContentPageURL = "http://automationpractice.com/";
-    this.tShirtMenu = ".sf-menu > :nth-child(3) > a";
+    this.tShirtMenu = "#block_top_menu > ul > li:nth-child(3) > a";
   }
 
   public visitMenuContentPage(): void {

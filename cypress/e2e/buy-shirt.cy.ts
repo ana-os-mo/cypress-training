@@ -27,8 +27,7 @@ describe("Buy a t-shirt", () => {
     shoppingCartPage.goToShoppingCartMenu();
     shoppingCartPage.goToAuthenticationMenu();
 
-    loginPage.fillIdFields(userId.email, userId.password);
-    loginPage.goToUserMenu();
+    loginPage.signIn(userId.email, userId.password);
 
     addressStepPage.goToShippingMenu();
 

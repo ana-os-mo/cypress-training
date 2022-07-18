@@ -9,12 +9,13 @@ class LoginPage {
     this.logInMenu = "#SubmitLogin";
   }
 
-  public fillIdFields(email:string, password:string): void {
+  private fillIdFields(email:string, password:string): void {
     cy.get(this.emailField).type(email);
     cy.get(this.passwordField).type(password);
   }
 
-  public goToUserMenu(): void {
+  public signIn(user:string, password:string): void {
+    this.fillIdFields(user, password);
     cy.get(this.logInMenu).click();
   }
 }

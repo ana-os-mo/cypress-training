@@ -1,6 +1,7 @@
 import {MenuContentPage, ProductListPage,
   ShoppingCartPage, LoginPage, AddressStepPage,
-  ShippingStepPage, PaymentStepPage}
+  ShippingStepPage, PaymentStepPage,
+  userId, validationMessage}
   from "../page/index";
 
 const menuContentPage = new MenuContentPage();
@@ -10,12 +11,6 @@ const loginPage = new LoginPage();
 const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
-
-const validationMessage = "Your order on My Store is complete.";
-const userId = {
-  email: "aperdomobo@gmail.com",
-  password: "WorkshopProtractor",
-};
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
@@ -41,3 +36,4 @@ describe("Buy a t-shirt", () => {
     paymentStepPage.validateOrderMessage(validationMessage);
   });
 });
+

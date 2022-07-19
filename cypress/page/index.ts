@@ -6,10 +6,3 @@ export {AddressStepPage} from "./address-step.page";
 export {ShippingStepPage} from "./shipping-step.page";
 export {PaymentStepPage} from "./payment-step.page";
 export {DressesListPage} from "./dresses-list.page";
-
-// ***********************************************************
-
-export {validationMessage, userId}
-  from "../test_objects/buy-tshirt-objects";
-export {expectedDressesList, numberOfDresses}
-  from "../test_objects/dresses-list-objects";

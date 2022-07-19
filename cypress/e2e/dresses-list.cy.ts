@@ -1,5 +1,4 @@
-import {MenuContentPage, DressesListPage,
-  expectedDressesList, numberOfDresses}
+import {MenuContentPage, DressesListPage}
   from "../page/index";
 
 describe("the user navigation to the dresses page should", () => {
@@ -13,6 +12,14 @@ describe("the user navigation to the dresses page should", () => {
 
   it("show the available dresses", () => {
     // Arrange
+    const expectedDressesList = [
+      "Printed Dress",
+      "Printed Dress",
+      "Printed Summer Dress",
+      "Printed Summer Dress",
+      "Printed Chiffon Dress",
+    ];
+    const numberOfDresses = 5;
     menuContentPage.visitMenuContentPage();
 
     // Action

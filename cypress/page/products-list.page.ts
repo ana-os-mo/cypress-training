@@ -3,12 +3,11 @@ class ProductListPage {
   private tShirtItemList: string;
 
   constructor() {
-    this.addToCartB = ".ajax_add_to_cart_button";
+    this.addToCartB = ".ajax_add_to_cart_button[title='Add to cart']";
     this.tShirtItemList = ".product_list";
   }
 
   private findProductByName(tShirtName: string) {
-    // Filter by text: .filter(':contains("Text")')
     return cy.get(this.tShirtItemList)
         .filter(`:contains("${tShirtName}")`);
   }

@@ -10,14 +10,13 @@ describe("upload a file then download another one", () => {
 
   it("then the file should be uploaded", () => {
     // Arrange
-    const file: string = "the-song.txt";
-    const validationMessage: string = "File Uploaded!";
+    const fileName: string = "the-song.txt";
     uploadPage.visitUploadDemoSite();
 
     // Action
-    uploadPage.uploadFile(file);
+    uploadPage.uploadFile(fileName);
 
     // Assertion
-    uploadPage.validateUpload(validationMessage);
+    uploadPage.validateUpload(fileName);
   });
 });

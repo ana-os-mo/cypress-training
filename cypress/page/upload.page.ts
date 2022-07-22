@@ -2,13 +2,13 @@ class UploadPage {
   private uploadDemoSiteURL: string;
   private chooseFileBtn: string;
   private submitBtn: string;
-  private uploadedFileMessage: string;
+  private uploadedFileName: string;
 
   constructor() {
     this.uploadDemoSiteURL = "https://the-internet.herokuapp.com/upload";
     this.chooseFileBtn = "#file-upload";
     this.submitBtn = "#file-submit";
-    this.uploadedFileMessage = "#content > div > h3";
+    this.uploadedFileName = "#uploaded-files"; // "#content > div > h3"; // #uploaded-files
   }
 
   public visitUploadDemoSite(): void {
@@ -20,9 +20,9 @@ class UploadPage {
     cy.get(this.submitBtn).click();
   }
 
-  public validateUpload(message: string): void {
-    cy.get(this.uploadedFileMessage)
-        .should("have.text", message);
+  public validateUpload(fileName: string): void {
+    cy.get(this.uploadedFileName)
+        .should("contain.text", fileName);
   }
 }
 

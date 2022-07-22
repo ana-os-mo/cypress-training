@@ -8,7 +8,7 @@ class UploadPage {
     this.uploadDemoSiteURL = "https://the-internet.herokuapp.com/upload";
     this.chooseFileBtn = "#file-upload";
     this.submitBtn = "#file-submit";
-    this.uploadedFileName = "#uploaded-files"; // "#content > div > h3"; // #uploaded-files
+    this.uploadedFileName = "#uploaded-files";
   }
 
   public visitUploadDemoSite(): void {

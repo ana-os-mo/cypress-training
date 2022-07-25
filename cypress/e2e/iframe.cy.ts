@@ -10,11 +10,12 @@ describe("the user navigation to the iframe page", () => {
   it("should able to interact with the iframe elements",
       {"retries": 2}, () => {
         const htmlTitle: string = "HTML Tutorial";
+        const cssTitle: string = "CSS Tutorial";
 
         iframePage.visitIframePage();
 
         iframePage.getFrameTitle(htmlTitle);
 
-        iframePage.goToCssPageInFrame();
+        iframePage.goToCssPageInFrame(cssTitle);
       });
 });

@@ -1,7 +1,7 @@
 import {MenuContentPage, DressesListPage}
   from "../page/index";
 
-describe("the user navigation to the dresses page should", () => {
+describe("the user navigation to the dresses page should", {"retries": 2}, () => {
   let menuContentPage: MenuContentPage;
   let dressesListPage: DressesListPage;
 

@@ -10,3 +10,4 @@ export {PersonalFormPage} from "./personal-form.page";
 export {FormConfirmationPage} from "./form-confirmation.page";
 export {UploadPage} from "./upload.page";
 export {DownloadPage} from "./download.page";
+export {IframePage} from "./iframe.page";

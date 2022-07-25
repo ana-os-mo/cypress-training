@@ -3,7 +3,7 @@ import {MenuContentPage, ProductListPage,
   ShippingStepPage, PaymentStepPage}
   from "../page/index";
 
-describe("Buy a t-shirt", () => {
+describe("Buy a t-shirt", {"retries": 2}, () => {
   let menuContentPage: MenuContentPage;
   let productListPage: ProductListPage;
   let shoppingCartPage: ShoppingCartPage;

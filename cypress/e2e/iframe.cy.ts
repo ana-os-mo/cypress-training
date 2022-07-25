@@ -5,17 +5,22 @@ describe("the user navigation to the iframe page", () => {
 
   before(() => {
     iframePage = new IframePage;
+    iframePage.visitIframePage();
   });
 
-  it("should able to interact with the iframe elements",
+  it("should have a title", () => {
+    const htmlTitle = "HTML Tutorial";
+
+    const htmlFrameTitle = iframePage.getFrameTitle();
+    iframePage.checkFrameTitle(htmlFrameTitle, htmlTitle);
+  });
+
+  it("should be able to interact with the iframe elements",
       {"retries": 2}, () => {
-        const htmlTitle: string = "HTML Tutorial";
-        const cssTitle: string = "CSS Tutorial";
+        const cssTitle = "CSS Tutorial";
 
-        iframePage.visitIframePage();
-
-        iframePage.getFrameTitle(htmlTitle);
-
-        iframePage.goToCssPageInFrame(cssTitle);
+        iframePage.goToCssPageInFrame();
+        const cssFrameTitle = iframePage.getFrameTitle();
+        iframePage.checkFrameTitle(cssFrameTitle, cssTitle);
       });
 });

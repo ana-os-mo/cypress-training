@@ -7,12 +7,13 @@
     "test:open": "npm run lint && cypress open",
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
-    "delete:reports": "rm -rf cypress/reports/",
-    "mochawesome-merge": "mochawesome-merge cypress/reports/mochawesome/*.json -o cypress/reports/mochawesome-report.json && marge cypress/reports/mochawesome-report.json -f mochawesome-report -o cypress/reports",
+    "delete:reports": "rm -rf cypress/reports/ && rm -rf public",
+    "mochawesome-merge": "mochawesome-merge cypress/reports/mochawesome/*.json -o cypress/reports/mochawesome-report.json",
+    "mochawesome-marge": "marge cypress/reports/mochawesome-report.json -f mochawesome-report -o public",
     "junit-merge": "junit-merge -d cypress/reports/junit -o cypress/reports/junit-report.xml",
     "test": "cypress run",
     "pretest": "npm run delete:reports",
-    "posttest": "npm run mochawesome-merge && npm run junit-merge"
+    "posttest": "npm run mochawesome-merge && npm run mochawesome-marge && npm run junit-merge"
   },
   "repository": {
     "type": "git",

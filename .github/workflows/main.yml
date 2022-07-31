@@ -27,4 +27,10 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
+
+      - name: deploy-report-to-githubPages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
         

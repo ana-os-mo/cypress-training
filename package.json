@@ -7,7 +7,7 @@
     "test:open": "npm run lint && cypress open",
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
-    "delete:reports": "rm -rf cypress/reports/ && rm -rf public",
+    "delete:reports": "rm -rf cypress/reports/ && rm -rf cypress/videos/ && rm -rf public",
     "mochawesome-merge": "mochawesome-merge cypress/reports/mochawesome/*.json -o cypress/reports/index.json",
     "mochawesome-marge": "marge cypress/reports/index.json -f index -o public",
     "junit-merge": "junit-merge -d cypress/reports/junit -o cypress/reports/junit-report.xml",
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/ana-os-mo/cypress-training#readme",
   "devDependencies": {
+    "@types/mochawesome": "^6.2.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "cypress": "^10.3.0",

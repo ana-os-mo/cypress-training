@@ -27,6 +27,11 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
+      
+      - name: copy-test-videos
+        run: |
+          mkdir public
+          cp -r cypress/videos public/videos
 
       - name: deploy-report-to-githubPages
         uses: peaceiris/actions-gh-pages@v3

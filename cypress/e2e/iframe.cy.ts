@@ -3,7 +3,7 @@ import {IframePage} from "../page";
 describe("the user navigation to the iframe page", () => {
   let iframePage: IframePage;
 
-  before({"retries": 2}, () => {
+  before(() => {
     iframePage = new IframePage;
     iframePage.visitIframePage();
   });

@@ -18,11 +18,13 @@ import "./commands";
 const addContext = require("mochawesome/addContext");
 
 Cypress.on("test:after:run", (test, runnable) => {
-  let videoName = Cypress.spec.name;
-  videoName = videoName.replace("/.ts.*", ".ts");
-  const videoUrl = "videos/" + videoName + ".mp4";
+  const videoName = Cypress.spec.name;
+  const videoUrl = `cypress/videos/${videoName}.mp4`;
 
-  addContext({test}, videoUrl);
+  return addContext({test}, {
+    title: videoName,
+    value: videoUrl,
+  });
 });
 
 // Alternatively you can use CommonJS syntax:

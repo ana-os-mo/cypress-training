@@ -27,6 +27,9 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: chrome
+      
+      - name: create-public-folder
+        run: mkdir public
 
       - name: deploy-report-to-githubPages
         uses: peaceiris/actions-gh-pages@v3
